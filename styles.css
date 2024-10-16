@@ -1,0 +1,290 @@
+/* General reset and body style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* Ensure full height for both html and body */
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-y: scroll; /* Force vertical scroll */
+    overflow-x: hidden; /* Ensure no horizontal scrolling */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc; /* Added to ensure header separation */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10; /* Ensures it stays above other elements */
+}
+
+.logo {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.logo-img {
+    width: 120px; /* Adjust the size as needed */
+    height: auto; /* Maintains the aspect ratio */
+    vertical-align: middle; /* Aligns it vertically with the menu */
+    margin-right: 20px; /* Adds some space between the logo and the nav menu */
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav ul li {
+    margin-left: 20px;
+}
+
+.nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+body {
+    padding-top: 80px; /* Ensure the body content doesn't overlap with the fixed header */
+}
+
+/* Main Hero Section */
+.hero {
+    position: relative;
+    min-height: 100vh; /* Min-height instead of height to allow scrolling */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center video */
+    z-index: 1; /* Place video behind text */
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center overlay text */
+    color: white;
+    z-index: 2; /* Place text above video */
+    text-align: center;
+}
+
+h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+.hero h1 {
+    font-size: 4rem;
+}
+
+.btn {
+    display: inline-block;
+    background: #e91e63;
+    color: #fff;
+    padding: 10px 30px;
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #c2185b;
+}
+
+/* Features Section */
+.features {
+    padding: 60px 0;
+    background: #f4f4f4;
+}
+
+.features h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.feature-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.feature-item {
+    width: 30%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 15px;
+}
+
+.feature-item h3 {
+    margin-bottom: 10px;
+}
+
+/* Pricing Section */
+.pricing {
+    padding: 60px 0;
+    background: #fff;
+}
+
+.pricing h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.pricing-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.plan {
+    width: 30%;
+    background: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 15px;
+}
+
+.plan.featured {
+    background: #e91e63;
+    color: #fff;
+}
+
+.plan h3 {
+    margin-bottom: 10px;
+}
+
+/* Download Section */
+.download {
+    padding: 60px 0;
+    background: #f4f4f4;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Login Section */
+.login, .register {
+    padding: 60px 0;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px; /* Consistent padding */
+    border: 0.5px solid #ccc; /* Thinner border */
+    border-radius: 3px; /* Rounded corners */
+    font-size: 16px;
+}
+
+.btn {
+    background: #007bff; /* Bootstrap primary color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #0056b3; /* Darker shade */
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .feature-grid, .pricing-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero {
+        min-height: 80vh; /* Reduce height for smaller screens */
+    }
+
+    .background-video {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+    
+
+}
+:root {
+    --overlay-heading-color: #000000; /* Default color for heading */
+    --overlay-paragraph-color: #ffffff; /* Default color for paragraph */
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+}
+
+/* Using custom properties for text colors */
+.overlay h1 {
+    color: var(--overlay-heading-color); /* Customizable heading color */
+    font-size: 4rem;
+}
+
+.overlay p {
+    color: var(--overlay-paragraph-color); /* Customizable paragraph color */
+    font-size: 1.5rem;
+}
